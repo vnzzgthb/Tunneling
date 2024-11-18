@@ -22,4 +22,3 @@ payload:
   - DOMAIN-KEYWORD,speedtestcustom
   - DOMAIN-KEYWORD,openspeedtest
   - DOMAIN-KEYWORD,wifiman
-  - DST-PORT,8080
