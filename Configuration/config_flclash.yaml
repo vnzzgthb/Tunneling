@@ -1,1 +1,91 @@
-
+port: 7890
+socks-port: 7891
+# redir-port: 7892
+# tproxy-port: 7895
+mixed-port: 7893
+mode: rule
+ipv6: false
+log-level: silent 
+allow-lan: true
+bind-address: "*"
+unified-delay: true 
+find-process-mode: strict
+global-client-fingerprint: random
+tcp-concurrent: true 
+external-controller: 0.0.0.0:9090
+secret: ""
+geodata-loader: memconservative 
+geodata-mode: false
+geo-auto-update: false
+geo-update-interval: 24
+profile:
+  store-selected: true
+  store-fake-ip: false
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [1-65535]    
+    TLS:
+      ports: [1-65535]
+    QUIC:
+      ports: [1-65535]
+tun:
+  enable: true
+  mtu: 1500
+  device: utun
+  stack: gvisor
+  dns-hijack:
+  - any:53   
+  - tcp://any:53
+  auto-route: true
+  strict-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  include-android-user: [0, 10]
+  exclude-package: []
+  include-package: []
+dns:
+  enable: true
+  cache-algorithm: arc
+  ipv6: false
+  default-nameserver:
+  - "8.8.8.8"
+  - "1.1.1.1"
+  listen: 0.0.0.0:7874
+  prefer-h3: false
+  use-host: true
+  use-system-hosts: true
+  respect-rules: true
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "*.lan"
+  - "*.local"
+  - "*.ntp.*"  
+  nameserver:
+  - "8.8.8.8" 
+  fallback:
+  - "1.1.1.1"
+  proxy-server-nameserver:
+  - "112.215.203.254"  # DNS XL Primary
+  - "112.215.198.248"  # DNS XL Primary      
+proxies:
+proxy-providers:  
+  Premium:
+    type: file
+    path: ./account/Premium.yaml
+    health-check:
+      enable: true
+      url: "https://www.gstatic.com/generate_204"
+      interval: 300     
+proxy-groups:
+- name: Tunnels
+  type: fallback
+  include-all-providers: true
+  icon: "https://raw.githubusercontent.com/vnzzgthb/ICONS/refs/heads/ICON/iconset/dark/SSID_Alt.png"        
+rules:
+- MATCH,Tunnels
