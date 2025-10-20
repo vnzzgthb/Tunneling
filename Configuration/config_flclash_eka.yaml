@@ -76,8 +76,9 @@ dns:
 proxies:
 proxy-providers:  
   Premium:
-    type: file
+    type: http
     path: ./account/Premium.yaml
+    url: "https://raw.githubusercontent.com/vnzzgthb/Tunneling/refs/heads/main/VPN/Eka.yaml"
     health-check:
       enable: true
       url: "https://www.gstatic.com/generate_204"
