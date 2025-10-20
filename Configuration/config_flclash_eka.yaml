@@ -75,9 +75,9 @@ dns:
   - "112.215.198.248"  # DNS XL Primary      
 proxies:
 proxy-providers:  
-  Premium:
+  Account:
     type: http
-    path: ./account/Premium.yaml
+    path: ./account/Account.yaml
     url: "https://raw.githubusercontent.com/vnzzgthb/Tunneling/refs/heads/main/VPN/Eka.yaml"
     health-check:
       enable: true
@@ -88,43 +88,6 @@ proxy-groups:
   type: fallback
   include-all-providers: true
   icon: "https://raw.githubusercontent.com/vnzzgthb/ICONS/refs/heads/ICON/iconset/dark/SSID_Alt.png"  
-- name: ads
-  type: selector
-  proxies:
-    - REJECT
-    - Tunnels
-rule-providers:
-  category-ads-all:
-    type: http
-    format: mrs
-    behavior: domain
-    path: ./rule-providers/category-ads-all.mrs    
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
-    interval: 28800  # Update rules every 8 hours  
-  instagram:
-    type: http
-    format: mrs
-    behavior: domain
-    path: ./rule-providers/instagram.mrs    
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/instagram.mrs"
-    interval: 28800  # Update rules every 8 hours  
-  youtube:
-    type: http
-    format: mrs
-    behavior: domain
-    path: ./rule-providers/youtube.mrs    
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"
-    interval: 28800  # Update rules every 8 hours    
-  tiktok:
-    type: http
-    format: mrs
-    behavior: domain
-    path: ./rule-providers/tiktok.mrs    
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"
-    interval: 28800  # Update rules every 8 hours
-rules:
-  - AND,((NETWORK,udp),(DST-PORT,443/80),(RULE-SET,youtube)),REJECT
-  - AND,((NETWORK,udp),(DST-PORT,443/80),(RULE-SET,instagram)),REJECT
-  - AND,((NETWORK,udp),(DST-PORT,443/80),(RULE-SET,tiktok)),REJECT
-  - RULE-SET,category-ads-all,ads
-  - MATCH,tunnels
+rules: 
+- GEOSITE,category-ads-all,REJECT
+- MATCH,Tunnels
