@@ -1,0 +1,30 @@
+proxies:      
+- name: ava.game.naver.com
+  type: trojan
+  server: ava.game.naver.com
+  port: 443
+  password: f712e353e03c5d56
+  tls: true
+  skip-cert-verify: true
+  sni: ava.game.naver.com.sing-box.web.id
+  network: ws
+  udp: true
+  ws-opts:
+    path: /fast-unlock-to-ux-design/buy-trojan-ws-pm-telegram-at-synricha
+    headers:
+      Host: ava.game.naver.com.sing-box.web.id
+
+- name: collection.linefriends.com
+  type: trojan
+  server: collection.linefriends.com
+  port: 443
+  password: f712e353e03c5d56
+  tls: truespace
+  skip-cert-verify: true
+  sni: collection.linefriends.com.sing-box.web.id
+  network: ws
+  udp: true
+  ws-opts:
+    path: /fast-unlock-to-ux-design/buy-trojan-ws-pm-telegram-at-synricha
+    headers:
+      Host: collection.linefriends.com.sing-box.web.id
