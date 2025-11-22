@@ -78,6 +78,8 @@ proxy-providers:
   Account:
     type: http
     path: ./account/Account.yaml
+    interval: 3600
+    proxy: DIRECT
     url: "https://raw.githubusercontent.com/vnzzgthb/Tunneling/refs/heads/main/VPN/Safdy.yaml"
     health-check:
       enable: true
