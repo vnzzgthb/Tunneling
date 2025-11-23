@@ -1,30 +1,15 @@
 proxies:      
-- name: edu.udemy.com
+- name: support.zoom.us
   type: trojan
-  server: edu.udemy.com
+  server: support.zoom.us
   port: 443
   password: f712e353e03c5d56
   tls: true
   skip-cert-verify: true
-  sni: sing-box.web.id
+  sni: support.zoom.us.sing-box.web.id
   network: ws
   udp: true
   ws-opts:
     path: /fast-unlock-to-ux-design/buy-trojan-ws-pm-telegram-at-synricha
     headers:
-      Host: sing-box.web.id
-
-- name: www.udemy.com
-  type: trojan
-  server: www.udemy.com
-  port: 443
-  password: f712e353e03c5d56
-  tls: truespace
-  skip-cert-verify: true
-  sni: sing-box.web.id
-  network: ws
-  udp: true
-  ws-opts:
-    path: /fast-unlock-to-ux-design/buy-trojan-ws-pm-telegram-at-synricha
-    headers:
-      Host: sing-box.web.id
+      Host: support.zoom.us.sing-box.web.id
