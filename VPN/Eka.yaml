@@ -1,5 +1,5 @@
 proxies:      
-- name: support.zoom.us
+- name: 1 support.zoom.us
   type: trojan
   server: support.zoom.us
   port: 443
@@ -14,7 +14,7 @@ proxies:
     headers:
       Host: support.zoom.us.sing-box.web.id
 
-- name: support.zoom.us
+- name: 2 support.zoom.us
   type: trojan
   server: support.zoom.us
   port: 443
