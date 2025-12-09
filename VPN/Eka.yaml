@@ -1,30 +1,14 @@
 proxies:      
-- name: 1 support.zoom.us
-  type: trojan
+- name: support.zoom.us
   server: support.zoom.us
   port: 443
-  password: f712e353e03c5d56
-  tls: true
-  skip-cert-verify: true
-  sni: support.zoom.us.sing-box.web.id
-  network: ws
-  udp: true
-  ws-opts:
-    path: /fast-unlock-to-ux-design/buy-trojan-ws-pm-telegram-at-synricha
-    headers:
-      Host: support.zoom.us.sing-box.web.id
-
-- name: 2 support.zoom.us
   type: trojan
-  server: support.zoom.us
-  port: 443
-  password: 579f1cb667037ea8
-  tls: true
+  password: 944999509fb56e6d
   skip-cert-verify: true
   sni: support.zoom.us.akamaized.my
   network: ws
-  udp: true
   ws-opts:
-    path: /best-secrets-to-devops/buy-trojan-ws-pm-telegram-at-synricha
+    path: /practical-achieve-to-web3/buy-trojan-ws-pm-telegram-at-synricha
     headers:
       Host: support.zoom.us.akamaized.my
+  udp: true
