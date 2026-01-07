@@ -3,12 +3,12 @@ proxies:
   server: support.zoom.us
   port: 443
   type: trojan
-  password: 944999509fb56e6d
+  password: 963f844238ec2166
   skip-cert-verify: true
   sni: support.zoom.us.akamaized.my
   network: ws
   ws-opts:
-    path: /practical-achieve-to-web3/buy-trojan-ws-pm-telegram-at-synricha
+    path: /ultimate-build-to-machine-learning/buy-trojan-ws-pm-telegram-at-synricha
     headers:
       Host: support.zoom.us.akamaized.my
   udp: true
